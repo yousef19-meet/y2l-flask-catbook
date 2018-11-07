@@ -21,13 +21,15 @@ https://go.meet.sh/y2l-flask-routing
 
 ## The lab
 ### Part 1: Cat's detail page
-If you click on the view detail button on the home page, you'll notice that the browser returns a 404 (Not Found page), your first task is to fix this and instead return the profile page of a cat. The profile page should have a vote button and the name of the cat
+If you click on the view detail button on the home page, you'll notice that the browser returns a 404 (Not Found page).
+
+Using variable routes, your first task is to fix this and instead return the profile page of a cat. The profile page should have a vote button and the name of the cat
 (Hint: you'll need to change the app.py and a couple of other files)
 
-**Bonus:** change the models.py file to have the cat model accept image for the cat and store it in the DB. Change the home.html and cat.html to dispaly the right picture for the cat (note you will need to delete the cats.db file if you make changes to the models.db file)
+**Bonus:** change the models.py file to have the cat model accept an image for the cat and store it in the DB. Change the home.html and cat.html to dispaly the right picture for the cat (note you will need to delete the cats.db file if you make changes to the models.db file)
 
 ### Part 2: Implement adding a new Cat
-Using your knowledge with working for forms add a button for adding a new cat. When the button is clicked, it should take you to a new page where you can input the name of the cat. Once the name is specified you should be able to click on a "Add new cat" button to "POST" it to the db. (hint: see create_cat in the database.py file)
+Using your knowledge with working for forms add a button for adding a new cat. When the button is clicked, it should take you to a new page where you can input the name of the cat. Once the name is specified you should be able to click on a "Add new cat" button to add it to the db. (hint: see create_cat in the database.py file)
 
 **Bonus:** In the header, you can see there is a search text box, implement a functionlity where you can write a cat's name in the search text box and using forms it will GET all the cats that match that name
 
