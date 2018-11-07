@@ -34,6 +34,7 @@ Using your knowledge with working for forms add a button for adding a new cat. W
 
 ### Part 3: Implementing a vote function
 Let's make the vote functionality work, make the vote functionlity work (how do you do that in the db?). When the vote button is clicked on a cat's profile it will add to the number of votes a has. You should update the home.html to show the total votes that a cat has
+
 **Bonus:** change the order of how cats are displayed on the home page to show the most popular cat first (notice how models.py has a relevant attribute for this)
 
 
