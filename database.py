@@ -12,3 +12,7 @@ def create_cat(name):
     cat_object = Cat(name=name)
     session.add(cat_object)
     session.commit()
+
+def get_all_cats():
+    cats = session.query(Cat).all()
+    return cats

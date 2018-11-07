@@ -27,32 +27,20 @@
   <!--Navbar End-->
   <img class="header_img mx-auto d-block" src="{{url_for('static', filename='images/catbook_logo.jpg')}}">
   <div class="row">
+      {% for cat in cats%}
       <div class="col-sm-4">
         <div class="card">
             <div class="card">
                 <img class="card-img-top" src="{{url_for('static', filename='images/cat1.jpg')}}">
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Text</p>
-                  <a href="#" class="btn btn-primary">Vote</a>
-                  <a href="#" class="btn btn-secondary">View details</a>
+                  <h5 class="card-title">{{cat.name}}</h5>
+                  <p class="card-text">Votes: 0</p>
+                  <a href="cats/{{cat.id}}" class="btn btn-primary">View details</a>
                 </div>
               </div>
         </div>
       </div>
-      <div class="col-sm-4">
-          <div class="card">
-              <div class="card">
-                  <img class="card-img-top" src="{{url_for('static', filename='images/cat1.jpg')}}">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Vote</a>
-                    <a href="#" class="btn btn-secondary">View details</a>
-                  </div>
-                </div>
-          </div>
-        </div>
+      {% endfor%}
     </div>
   
   <!--BOOTSTRAP Javascript import-->
