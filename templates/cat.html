@@ -1,3 +1,8 @@
 <html>
-  {{cats[0].name}}
+
+<!-- get the Id of the cat to put into this  -->
+  {{cat.name}}
+  <form action = "/cats/{{cat.id}}" method = "POST">
+  <button name="Vote" type="submit">Vote</button>
+</form>
 </html>
