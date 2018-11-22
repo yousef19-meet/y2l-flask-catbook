@@ -19,3 +19,14 @@ def catbook(cat_view):
         return Redirect('/')
 if __name__ == '__main__':
    app.run(debug = True)
+
+
+@app.route('/create', methods=['GET', 'POST'])
+def homepage():
+    if request.method == 'GET':
+        return render_template('create.html')
+    else:
+        name = request.form['catname']
+        save_to_database(name)        
+        return render_template('home.html',
+        n = name,)
